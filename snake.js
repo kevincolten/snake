@@ -23,7 +23,7 @@ var Snake = (function(lib){
 		}
 		var headLoc = [body[head][0], body[head][1]];
 		if (headLoc.toString() == this.foodLoc.toString()){
-			this.foodLoc = [getRandomInt(0,29), getRandomInt(0,29)];
+			this.foodLoc = [getRandomInt(0,28), getRandomInt(0,28)];
 		} else {
 			body.shift(body[0]);
 		}
@@ -52,8 +52,8 @@ var Snake = (function(lib){
 	Game.prototype.hitWall = function () {
 		var body = this.snakeBody;
 		var head = body.length - 1;
-		if (body[head][0] > 29 || body[head][0] < 0 ||
-				body[head][1] > 29 || body[head][1] < 0 ){
+		if (body[head][0] > 28 || body[head][0] < 0 ||
+				body[head][1] > 28 || body[head][1] < 0 ){
 					return true;
 		}
 		return false;
